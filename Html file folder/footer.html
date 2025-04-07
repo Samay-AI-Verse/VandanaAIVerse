@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Animated Footer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .footer-link {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .footer-link:hover {
+            transform: translateY(-3px);
+            color: #4F46E5;
+        }
+        .footer-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: linear-gradient(90deg, #4F46E5, #EC4899);
+            transition: width 0.3s ease;
+        }
+        .footer-link:hover::after {
+            width: 100%;
+        }
+        .social-icon {
+            transition: all 0.3s ease;
+            background: white;
+            border-radius: 50%;
+            padding: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .social-icon:hover {
+            transform: scale(1.2) rotate(5deg);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        .fa-github:hover {
+            background: linear-gradient(45deg, #333, #6e5494);
+            color: white;
+        }
+        .fa-linkedin:hover {
+            background: linear-gradient(45deg, #0077B5, #00A0DC);
+            color: white;
+        }
+        .fa-envelope:hover {
+            background: linear-gradient(45deg, #D44638, #EA4335);
+            color: white;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .logo-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        footer {
+            position: relative;
+            overflow: hidden;
+        }
+      
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <footer class="bg-white text-black py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2 logo-animation">
+                        <img src="/ALL logo and images/LOGO2-removebg-preview (1).png" alt="Company Logo" class="h-12 w-12" style="width: 200px; height:60px;">
+                    </div>
+                    <p class="text-gray-600">AI-driven solutions for safety, learning, and innovation. Transforming technology into real-world impact.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="social-icon text-gray-600 hover:text-black">
+                            <i class="fab fa-github fa-lg"></i>
+                        </a>
+                        <a href="#" class="social-icon text-gray-600 hover:text-blue-600">
+                            <i class="fab fa-linkedin fa-lg"></i>
+                        </a>
+                        <a href="#" class="social-icon text-gray-600 hover:text-red-500">
+                            <i class="fas fa-envelope fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="footer-link hover:text-gray-600">Home</a></li>
+                        <li><a href="#" class="footer-link hover:text-gray-600">Products</a></li>
+                        <li><a href="#" class="footer-link hover:text-gray-600">Services</a></li>
+                        <li><a href="#" class="footer-link hover:text-gray-600">Contact Us</a></li>
+                        <li><a href="#" class="footer-link hover:text-gray-600">About</a></li>
+                    </ul>
+                </div>
+
+                <!-- Products -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">AI Models</h3>
+                    <ul class="space-y-2">
+                        <li><a href="/Login_sign_up Form/public/LoginSign.html" class="footer-link hover:text-gray-600">VLearnX</a></li>
+                        <li><a href="/Login_sign_up Form/public/LoginSign.html" class="footer-link hover:text-gray-600">VSecureX</a></li>
+                        <li><a href="/Login_sign_up Form/public/LoginSign.html" class="footer-link hover:text-gray-600">VLegalX</a></li>
+                        <li><a href="/Login_sign_up Form/public/LoginSign.html" class="footer-link hover:text-gray-600">VDetectX</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nanded,Maharashtra</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 9764096358</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-envelope"></i>
+                            <span>samaypowade23@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-200 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500">© 2025 VandanaAVerse All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-500 hover:text-black">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-black">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-black">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Colorful ripple effect on click
+        document.querySelectorAll('.footer-link, .social-icon').forEach(element => {
+            element.addEventListener('click', function(e) {
+                const x = e.clientX - e.target.getBoundingClientRect().left;
+                const y = e.clientY - e.target.getBoundingClientRect().top;
+                
+                const ripple = document.createElement('span');
+                ripple.className = 'ripple';
+                ripple.style.left = `${x}px`;
+                ripple.style.top = `${y}px`;
+                
+                const colors = ['#4F46E5', '#EC4899', '#F59E0B', '#10B981'];
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                ripple.style.backgroundColor = color;
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 1000);
+            });
+        });
+
+        // Animate elements on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.footer-link, .social-icon, .logo-animation').forEach(el => {
+            el.style.opacity = 0;
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.5s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

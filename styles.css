@@ -1,0 +1,1418 @@
+/* 🌟 General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    overflow-x: hidden;
+
+}
+
+/* 🌟 Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* 🌟 Sticky Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    /* Light transparency */
+    box-shadow: 0 4px 10px rgba(28, 16, 16, 0.1);
+    padding: 15px 0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Adding padding so content doesn't overlap navbar */
+body {
+    padding-top: 70px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    /* Reduce width to move it right */
+    margin-left: auto;
+    margin-right: 20px;
+    /* Adjust spacing */
+}
+
+/* 🌟 Logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    width: 570px;
+}
+
+/* 🌟 Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin-left: auto;
+    /* Push nav-links to the right */
+    padding: 0;
+    align-items: center;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+/* 🌟 Common Button Styles */
+.auth-buttons a {
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 12px 30px;
+    text-align: center;
+    border-radius: 30px 30px 0px 30px;
+    /* Rounded buttons */
+    transition: all 0.5s ease-in-out;
+    /* Smooth transition */
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(8px);
+    /* Glass effect */
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    /* Subtle border */
+}
+
+/* 🌟 Initial Gradient */
+.signup-btn {
+    /* Purple to Pink */
+    border-radius: 30px 50px 50px 30px;
+    /* Right Side More Rounded */
+}
+
+
+/* 🌟 Hover Effects: Color Change + Glow */
+.auth-buttons a:hover {
+    transform: scale(1.1);
+    /* Slight zoom effect */
+    color: white;
+    border: 2px solid white;
+    /* White border on hover */
+    box-shadow: 0 0 20px rgba(255, 94, 189, 0.9);
+    /* Soft pinkish-purple glow */
+}
+
+/* 🌟 Color Shift on Hover */
+.signup-btn:hover {
+    background: linear-gradient(45deg, #ff5ebd, #007bff);
+    /* Pink to Blue */
+}
+
+.login-btn:hover {
+    background: linear-gradient(45deg, #007bff, #ff5ebd);
+    /* Blue to Pink */
+}
+
+.login-btn {
+    color: black;
+}
+
+/* 🌟 Hover Animation: Pulsating Glow */
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 94, 189, 0.5);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(255, 94, 189, 0.9);
+    }
+
+    100% {
+        box-shadow: 0 0 5px rgba(255, 94, 189, 0.5);
+    }
+}
+
+.auth-buttons a:hover {
+    animation: pulseGlow 1.5s infinite alternate;
+}
+
+/* 🌟 Hero Section */
+
+.hero-section h1 {
+    font-size: 36px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #666;
+}
+
+.hero-section .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.cta-btn:hover {
+    background: #000000;
+}
+
+/* 🌟 Content Sections */
+.content-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+
+.content-section h2 {
+    font-size: 28px;
+    color: #007bff;
+}
+
+.content-section p {
+    font-size: 16px;
+    color: #555;
+}
+
+/* 🌟 Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        width: 100%;
+        top: 60px;
+        left: 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        color: #333;
+        cursor: pointer;
+    }
+
+    .auth-buttons {
+        flex-direction: column;
+        border-radius: 10px;
+    }
+
+    .auth-buttons a {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.logo img {
+    max-width: 250px;
+    /* Adjust size as needed */
+    height: auto;
+    display: block;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 30px;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 50%;
+}
+
+.container_01 {
+    flex: 1;
+    text-align: left;
+    padding-right: 20px;
+}
+
+
+.changing-text {
+    color: #007bff;
+    font-weight: bold;
+    animation: fadeInOut 3s infinite;
+    font-size: 18px;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.slideshow-container {
+    max-width: 100%;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* Center it vertically */
+    width: auto;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.5);
+    user-select: none;
+    z-index: 10;
+}
+
+.prev {
+    left: 10px;
+    /* Move left button closer to the edge */
+}
+
+.next {
+    right: 10px;
+    /* Move right button closer to the edge */
+}
+
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.dot {
+    /* Size of each dot */
+    width: 10px;
+    height: 10px;
+    /* Round shape */
+    border-radius: 50%;
+    /* Light gray color by default */
+    background-color: #bbb;
+    /* Spacing between dots */
+    margin: 0 5px;
+    /* Make them line up horizontally */
+    display: inline-block;
+    /* So they change the cursor on hover (optional) */
+    cursor: pointer;
+}
+
+/* Example of an "active" dot */
+.active {
+    background-color: #717171;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* 🌟 Updated Hero Section Layout */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.container_01 {
+    flex: 1;
+    text-align: left;
+    gap: 20px;
+}
+
+.image-slider {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.container_01 {
+    flex: 1;
+    text-align: left;
+    gap: 20px;
+
+}
+
+.image-slider {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 50%;
+}
+
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+}
+
+.mySlides img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-slider {
+        max-width: 100%;
+    }
+}
+
+/* 🌟 CTA Button */
+.cta-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px 10px;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+    width: 150px;
+    text-align: center;
+
+}
+
+.cta-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: white;
+    transition: left 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.cta-btn:hover::before {
+    left: 0;
+}
+
+.cta-btn:hover {
+    color: black;
+    z-index: 1;
+}
+
+
+
+/* 🌟 Animated Text */
+.changing-text {
+    color: #007bff;
+    font-weight: bold;
+    animation: fadeInOut 3s infinite;
+    font-family: Arial, sans-serif;
+    font-size: 25px;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+.container_02 {
+    display: flex;
+    position: relative;
+    gap: 20px;
+    /* width: 100%; */
+    margin-left: 30px;
+}
+
+.box {
+    width: 300px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    color: #333;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.box img {
+    width: 200px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.box h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.box p {
+    font-size: 14px;
+    color: #555;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+.button_01 {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.4s ease-in-out;
+    cursor: pointer;
+    border: 2px solid black;
+    position: relative;
+    overflow: hidden;
+}
+
+.button_01::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.button::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-in-out;
+    z-index: -1;
+}
+
+.button:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.button:hover {
+    color: black;
+    z-index: 1;
+}
+
+.button_01:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.button_01:hover {
+    color: black;
+    z-index: 1;
+}
+
+.container_03 {
+    max-width: 1050px;
+    margin: 15px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.container_03.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.service-box {
+    flex: 1 1 300px;
+    background: #e3f2fd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.4s ease, background 0.4s ease, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.service-box:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #0056b3, #00d4ff);
+    color: rgb(56, 54, 54);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.service-box:hover p {
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.sam {
+    background-color: #000000;
+}
+
+
+/* Section Styling */
+.team-section {
+    padding: 0px 20px;
+    margin-top: -20px;
+}
+
+.team-category_01 {
+    font-size: 1.5rem;
+    color: #007bff;
+    margin-bottom: 15px;
+    text-align: center;
+    /* Ensures text is centered */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+h3.team-category {
+    font-size: 1.4rem;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Team Container */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-items: center;
+    padding: 20px;
+}
+
+.team-section-box {
+    background: linear-gradient(135deg, #f8f9fa, #e0e0e0);
+    /* Light gray gradient */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15),
+        inset 0px 3px 8px rgba(255, 255, 255, 0.5);
+    /* Outer & inner shadow */
+    margin: 40px auto;
+    width: 90%;
+    max-width: 1200px;
+    position: relative;
+    overflow: hidden;
+
+    /* Animate from bottom to top when page loads */
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1s ease-out forwards, floatingEffect 4s ease-in-out infinite;
+}
+
+/* Slide-up effect on page load */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Smooth shaking effect */
+@keyframes floatingEffect {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-5px);
+    }
+
+    /* Move slightly up */
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(5px);
+    }
+
+    /* Move slightly down */
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Animate each team member's box one after another */
+.team-box {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Delay animation for a cascading effect */
+.team-box:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.team-box:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.team-box:nth-child(3) {
+    animation-delay: 0.7s;
+}
+
+.team-box:nth-child(4) {
+    animation-delay: 0.9s;
+}
+
+/* Animation for individual team boxes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Team Box */
+.team-box {
+    width: 180px;
+    padding: 15px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.team-box:hover {
+    background: #007bff;
+    color: white;
+    transform: translateY(-8px);
+}
+
+/* Circular Images */
+.team-box img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-box:hover img {
+    transform: scale(1.1);
+    border-color: white;
+}
+
+/* Name & Role */
+.team-box h3 {
+    margin: 8px 0;
+    font-size: 1rem;
+}
+
+.team-box p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Social Links */
+.social-links {
+    margin-top: 8px;
+}
+
+.social-links a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 6px;
+    color: #007bff;
+    transition: color 0.3s ease-in-out;
+}
+
+.team-box:hover .social-links a {
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .team-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+
+
+@keyframes floatingText {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#Services1 {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    animation: floatingText 3s ease-in-out infinite;
+}
+
+@keyframes floatingText {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    /* Ensure the video is behind other content */
+    transform: translate(-50%, -50%);
+}
+
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+.hero-section {
+
+    position: relative;
+    /* Needed for proper layering */
+    text-align: center;
+    padding: 100px 20px;
+    background: transparent;
+    /* Remove the solid background color */
+    height: 67vh;
+    /* Use full viewport height */
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+    /* Hide any overflow from the video */
+    margin-top: -70px;
+
+
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    object-fit: cover;
+    filter: brightness(1.2) contrast(1.1);
+    opacity: 0.9;
+    /* Adjust opacity as needed */
+}
+
+
+
+#new1 {
+    margin-top: 50px;
+    width: 100%;
+    /* background-color: red; */
+    margin-left: 20px;
+    height: 400px;
+}
+
+/* 🌟 Hero Section */
+/* 🌟 Hero Section */
+.heroSection {
+    text-align: center;
+    padding: 10px 20px;
+    background: transparent;
+    /* Keeps background video visible */
+    color: #F8F8F8;
+    /* Crisp White for readability */
+}
+
+/* 🌟 High-Impact Title */
+
+/* 🌟 Stylish Subheading */
+.heroSection p {
+    font-size: 24px;
+    font-weight: 500;
+    color: #F8F8F8;
+    /* Bright white for clarity */
+    /* Electric Blue glow */
+}
+
+/* 🌟 Animated Changing Text */
+.changing-text {
+    font-weight: bold;
+    font-size: 25px;
+    background: linear-gradient(45deg, #007BFF, #007BFF);
+    /* Neon Pink to Electric Blue */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* border-color: linear-gradient(90deg, #020202, #525455); */
+    font-family: "Bungee Tint", sans-serif;
+}
+
+/* 🌟 Get Started Button */
+.cta-btn {
+    display: inline-block;
+    margin-top: 25px;
+    width: 100px;
+    padding: 16px 45px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border-radius: 50px 10px;
+    /* Unique asymmetric curve */
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    background: linear-gradient(90deg, #007BFF, #FF007F);
+    /* Electric Blue to Neon Pink */
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.8);
+    /* Soft Blue Glow */
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-btn_01 {
+    display: inline-block;
+    margin-top: 25px;
+    width: 100px;
+    padding: 16px 45px;
+    font-size: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    border-radius: 50px 10px;
+    /* Unique asymmetric curve */
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    background: transparent;
+    /* Electric Blue to Neon Pink */
+    /* Soft Blue Glow */
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-btn_01:hover {
+    background: linear-gradient(90deg, #FF007F, #F8F8F8);
+    /* Neon Pink to White */
+    border-color: white;
+    color: black;
+    box-shadow: 0 0 30px rgba(255, 0, 127, 0.9);
+    /* Neon Pink Glow */
+    transform: scale(1.10);
+}
+
+/* 🌟 Hover Effect for Get Started Button */
+.cta-btn:hover {
+    background: linear-gradient(90deg, #FF007F, #f8f8f8);
+    /* Neon Pink to White */
+    border-color: white;
+    color: black;
+    box-shadow: 0 0 30px rgba(255, 0, 127, 0.9);
+    /* Neon Pink Glow */
+    transform: scale(1.10);
+}
+
+/* 🌟 Button Glow Animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+    }
+
+    50% {
+        box-shadow: 0 0 35px rgba(255, 0, 127, 0.9);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(0, 123, 255, 0.6);
+    }
+}
+
+.cta-btn:hover {
+    animation: glow 1.5s infinite alternate;
+}
+
+
+/* 🌟 Default Navbar (Transparent for Video Section) */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    /* Initially transparent */
+    box-shadow: none;
+    padding: 15px 0;
+    z-index: 1000;
+    transition: all 0.4s ease-in-out;
+}
+
+/* 🌟 Scrolled Navbar (After Leaving Video Section) */
+.navbar.scrolled {
+    background: white;
+    /* Change to solid white */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Add soft shadow */
+}
+
+/* 🌟 Change Navigation Links When Scrolled */
+.navbar.scrolled .nav-links a {
+    color: black;
+    /* Dark text for visibility */
+}
+
+/* 🌟 Change Logo When Scrolled */
+.navbar.scrolled .logo img {
+    filter: brightness(0);
+    /* Make the logo dark */
+}
+
+/* 🌟 Change Button Styles When Scrolled */
+.navbar.scrolled .auth-buttons a {
+    color: black;
+    /* Change button text color */
+    border-color: black;
+    /* Adjust button borders */
+}
+
+/* 🌟 Hover Effect for Buttons */
+.navbar.scrolled .auth-buttons a:hover {
+    background: #007BFF;
+    /* Light blue on hover */
+    color: white;
+}
+
+
+/* 🌟 Default Navbar (Transparent for Video Section) */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    /* Initially transparent */
+    box-shadow: none;
+    padding: 15px 0;
+    z-index: 1000;
+    transition: all 0.4s ease-in-out;
+}
+
+/* 🌟 Scrolled Navbar (Changes When Leaving Video Section) */
+.navbar.scrolled {
+    background: white;
+    /* Solid background */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
+    transition: all 0.4s ease-in-out;
+}
+
+/* 🌟 Navigation Animation on Scroll */
+.navbar.animated {
+    animation: navbarEffect 1.5s ease-in-out;
+}
+
+/* 🌟 Define Animation Effect */
+@keyframes navbarEffect {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    50% {
+        transform: translateY(0px);
+        opacity: 1;
+        box-shadow: 0px 4px 20px rgba(0, 123, 255, 0.3);
+        /* Soft Blue Glow */
+    }
+
+    100% {
+        box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+
+.signup-btn {
+    background: linear-gradient(45deg, #ff00c8, #acaaaa);
+    /* Purple to Pink */
+    color: white;
+    border-radius: 30px 50px 50px 30px;
+    /* Rounded shape */
+    transition: all 0.4s ease-in-out;
+}
+
+/* 🌟 Change Sign Up & Log In Buttons When Leaving Background Video Section */
+.signup-btn.scrolled-btn {
+    background: black !important;
+    /* Change to black */
+    color: white !important;
+    border-color: black;
+}
+
+/* 🌟 Hover Effect for Both Buttons */
+.signup-btn.scrolled-btn:hover,
+.login-btn.scrolled-btn:hover {
+    background: black !important;
+    /* Darker black on hover */
+    border-radius: 70px 20px 80px 30px;
+
+}
+
+.login-btn.scrolled-btn:hover {
+    color: white;
+    background: black;
+}
+
+.login-btn {
+
+    color: #000000;
+}
+
+
+
+/* 🌟 Adjust for Mobile Screens */
+@media (max-width: 768px) {
+    .hero-section {
+        height: 80vh;
+        /* Adjust height for mobile */
+        padding: 40px 10px;
+    }
+
+    .background-video {
+        height: auto;
+        min-height: 100%;
+    }
+
+    .hero-content {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+/* Hero Section Styling */
+.heroSection {
+    text-align: center;
+    padding: 50px 20px;
+    background-size: 200% 200%;
+    animation: gradientBG 5s infinite alternate;
+    color: white;
+    font-size: 2rem;
+}
+
+/* Typing Effect */
+#my2::after {
+    content: "|";
+    display: inline-block;
+    animation: blinkCursor 0.7s infinite;
+}
+
+
+
+.section_01 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 6.3%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-in-out;
+    width: 1120px;
+    font-size: 18px;
+
+}
+
+.section_01.show_01 {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+.section_01:nth-child(odd) .image-content_01 {
+    order: 2;
+}
+
+.section_01:nth-child(even) .image-content_01 {
+    order: -1;
+}
+
+.text-content_01 {
+    width: 50%;
+    font-size: 17px;
+}
+
+.image-content_01 {
+    width: 40%;
+}
+
+.image-content_01 img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.LearnMore {
+    background-color: #f5f5f5;
+}
+
+
+
+.Services1 {
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    animation: floatingText 3s ease-in-out infinite;
+    font-size: 30px;
+}
+
+
+
+#demo3 {
+
+    margin-top: -40px;
+
+}
+
+#demo4 {
+
+    font-size: 17px;
+
+}
+
+#demo4:hover {
+    border-radius: 50px 10px;
+    min-width: 100px;
+    padding-left: 50px;
+}
+
+#learn {
+
+    background-color: transparent;
+
+}
+
+.login-btn:hover {
+    border-radius: 50px 10px;
+
+}
+
+.signup-btn:hover {
+    border-radius: 50px 10px;
+
+}
+
+
+/*  Section of our new services */
+#demo7 {
+    padding: 0;
+    margin-top: 0;
+}
